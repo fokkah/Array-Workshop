@@ -1,14 +1,20 @@
 package se.lexicon;
 
+import java.lang.reflect.Array;
+
 /**
  * The NameRepository class provides methods to manage a list of names.
  * It offers functionalities such as adding, removing, finding, and updating names.
  */
 public class NameRepository {
 
-    private static String[] names = new String[0]; // element format should be ["firstName lastName", "firstName lastName"]
+    private static String[] names = new String[1]; // element format should be ["firstName lastName", "firstName lastName"]
 
-
+        public static void print(String[] arr){ //Testing purpose
+            for (String element : arr){
+                System.out.println(element);
+            }
+        }
     /**
      * Retrieves the current size of the names array.
      *
@@ -16,7 +22,8 @@ public class NameRepository {
      */
     public static int getSize() {
         //todo: PART 1: implement getSize method
-        return 0;
+
+        return names.length;
     }
 
 
@@ -27,6 +34,19 @@ public class NameRepository {
      */
     public static void setNames(final String[] names) {
         //todo: PART 1: implement setNames method
+
+        String[] setNames = {"", "", ""};
+        System.out.println("Be4Set : ");
+        for (String x : setNames){
+            System.out.println(x);
+        }
+        System.out.println("\nAfter Set : ");
+        Array.set(setNames,0,"First Name");
+        Array.set(setNames,1,"last name");
+        for (String x : setNames);{
+            System.out.println();
+        }
+
     }
 
 
@@ -35,6 +55,8 @@ public class NameRepository {
      */
     public static void clear() {
         //todo: PART 1: implement clear method
+        String[] names = new String[]{};
+        names = null;
     }
 
 
@@ -45,7 +67,13 @@ public class NameRepository {
      */
     public static String[] findAll() {
         //todo: PART 1: implement findAll method
-        return null;
+        String[] names = new String [4];
+        names[0] = new String("tompa");
+        names[1] = new String("Leif");
+        names[2] = new String("jonas");
+        names[3] = new String("carro");
+        print(names); //Testing purpose
+        return names;
     }
 
 

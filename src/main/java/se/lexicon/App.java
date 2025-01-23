@@ -7,7 +7,10 @@ public class App {
         int size = NameRepository.getSize();
         System.out.println(size);
         NameRepository.setNames(new String[]{"Erik Svensson", "Mehrdad Javan"});
+        NameRepository.findAll(); //Testing purpose
         System.out.println(NameRepository.getSize());
         // call more methods as needed
     }
 }
+
+
